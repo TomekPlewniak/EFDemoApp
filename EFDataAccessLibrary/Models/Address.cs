@@ -14,6 +14,8 @@ namespace EFDataAccessLibrary.Models
         [MaxLength(100)]
         public string City { get; set; }
         
+        [Required]
+        [MaxLength(50)]
         public string State { get; set; }
         
         public string ZipCode { get; set; }
