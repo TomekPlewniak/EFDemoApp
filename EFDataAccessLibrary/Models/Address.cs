@@ -10,6 +10,8 @@ namespace EFDataAccessLibrary.Models
         [MaxLength(200)]
         public string StreetAddress { get; set; }
         
+        [Required]
+        [MaxLength(100)]
         public string City { get; set; }
         
         public string State { get; set; }
