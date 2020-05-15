@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFDataAccessLibrary.Models
 {
@@ -6,6 +7,8 @@ namespace EFDataAccessLibrary.Models
     {
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(50)]
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
