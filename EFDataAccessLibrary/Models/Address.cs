@@ -18,6 +18,8 @@ namespace EFDataAccessLibrary.Models
         [MaxLength(50)]
         public string State { get; set; }
         
+        [Required]
+        [MaxLength(10)]
         public string ZipCode { get; set; }
     }
 }
