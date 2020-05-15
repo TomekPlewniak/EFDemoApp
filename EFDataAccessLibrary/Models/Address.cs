@@ -1,9 +1,13 @@
-﻿namespace EFDataAccessLibrary.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EFDataAccessLibrary.Models
 {
     public class Address
     {
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(200)]
         public string StreetAddress { get; set; }
         
         public string City { get; set; }
