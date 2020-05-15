@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EFDataAccessLibrary.Models
+﻿namespace EFDataAccessLibrary.Models
 {
     public class Address
     {
