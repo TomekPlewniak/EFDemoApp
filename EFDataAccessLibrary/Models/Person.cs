@@ -15,6 +15,7 @@ namespace EFDataAccessLibrary.Models
         [MaxLength(50)]
         public string LastName { get; set; }
 
+        [Required]
         public int Age { get; set; }
 
         public List<Address> Addresses { get; set; } = new List<Address>();
