@@ -31,7 +31,15 @@ namespace EFDemoWeb.Pages
             var people = _db.People
                 .Include(a => a.Addresses)
                 .Include(e => e.EmailAddresses)
-                .ToList();
+                .ToList()
+                .Where(p => ApprovedAge(p.Age));
+                //.Where(p => p.Age >= 18 && p.Age <= 65)
+                //.ToList();
+        }
+
+        private bool ApprovedAge(int age)
+        {
+            return (age >= 18 && age <= 65);
         }
 
         private void LoadSampleData()
