@@ -31,10 +31,10 @@ namespace EFDemoWeb.Pages
             var people = _db.People
                 .Include(a => a.Addresses)
                 .Include(e => e.EmailAddresses)
-                .ToList()
-                .Where(p => ApprovedAge(p.Age));
-                //.Where(p => p.Age >= 18 && p.Age <= 65)
-                //.ToList();
+                //.ToList()
+                //.Where(p => ApprovedAge(p.Age));
+                .Where(p => p.Age >= 18 && p.Age <= 65)
+                .ToList();
         }
 
         private bool ApprovedAge(int age)
